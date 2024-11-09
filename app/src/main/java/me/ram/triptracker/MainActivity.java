@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -138,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 // Clear the current list to prevent duplicates when updating the list
                 expenseList.clear();
-
+                double total = 0.0;
                 // Loop through the children of the snapshot (each expense entry)
                 for (DataSnapshot expenseSnapshot : snapshot.getChildren()) {
                     // Get each expense object
@@ -147,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
                     // Add the expense object to the list
                     if (expense != null) {
                         expenseList.add(expense);
+                        total += expense.getAmount();
                     }
                 }
 
@@ -155,6 +157,9 @@ public class MainActivity extends AppCompatActivity {
 
                 // Update the ListView by notifying the adapter
                 adapter.notifyDataSetChanged();
+
+                TextView totalExpensesTextView = findViewById(R.id.totalExpenses);
+                totalExpensesTextView.setText(String.format("Total Expenses: $%.2f", total));
             }
 
             @Override
