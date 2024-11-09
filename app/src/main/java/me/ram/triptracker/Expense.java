@@ -20,11 +20,11 @@ public class Expense {
     }
 
     // Getters and Setters
-    public String getExpenseId() {
+    public String getId() {
         return expenseId;
     }
 
-    public void setExpenseId(String expenseId) {
+    public void setId(String expenseId) {
         this.expenseId = expenseId;
     }
 

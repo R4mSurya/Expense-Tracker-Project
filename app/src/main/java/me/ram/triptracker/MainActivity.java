@@ -144,11 +144,13 @@ public class MainActivity extends AppCompatActivity {
                 for (DataSnapshot expenseSnapshot : snapshot.getChildren()) {
                     // Get each expense object
                     Expense expense = expenseSnapshot.getValue(Expense.class);
-
+                    String[] categories = {"Accommodation", "Transportation", "Food", "Activities", "Other"};
                     // Add the expense object to the list
                     if (expense != null) {
                         expenseList.add(expense);
                         total += expense.getAmount();
+
+
                     }
                 }
 
