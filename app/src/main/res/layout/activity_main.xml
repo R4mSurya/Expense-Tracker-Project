@@ -7,13 +7,91 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Total Expenses Display -->
+        <TextView
+            android:id="@+id/totalExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Total Expenses: $0.00"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <!-- Expense Breakdown by Category -->
+        <LinearLayout
+            android:layout_below="@id/totalExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <!-- Accommodation Category -->
+            <TextView
+                android:id="@+id/accommodationTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accommodation: $0.00"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Transportation Category -->
+            <TextView
+                android:id="@+id/transportationTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transportation: $0.00"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Food Category -->
+            <TextView
+                android:id="@+id/foodTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food: $0.00"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Activities Category -->
+            <TextView
+                android:id="@+id/activitiesTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activities: $0.00"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Other Expenses Category -->
+            <TextView
+                android:id="@+id/otherTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other Expenses: $0.00"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Floating Action Button at the Bottom -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addExpenseFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_add_24"
+            android:contentDescription="Add Expense"
+            android:backgroundTint="@color/design_default_color_primary" />
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

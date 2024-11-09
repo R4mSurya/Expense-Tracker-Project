@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "39813254043",
+    "project_id": "triptracker-3a7e0",
+    "storage_bucket": "triptracker-3a7e0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39813254043:android:d5cd1b604654391964af3e",
+        "android_client_info": {
+          "package_name": "me.ram.triptracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBucQwVRZfmayxQaavU3v1EVfkB8bhHGvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
