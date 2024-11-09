@@ -1,32 +1,62 @@
 package me.ram.triptracker;
 
 public class Expense {
-    private String name;
+    private String expenseId;
+    private String expenseName;
     private double amount;
     private String category;
     private String date;
 
     // Default constructor required for Firebase
-    public Expense() {
-    }
+    public Expense() {}
 
-    public Expense(String name, double amount, String category, String date) {
-        this.name = name;
+    // Constructor with parameters
+    public Expense(String expenseId, String expenseName, double amount, String category, String date) {
+        this.expenseId = expenseId;
+        this.expenseName = expenseName;
         this.amount = amount;
         this.category = category;
         this.date = date;
     }
 
-    // Getters and setters
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    // Getters and Setters
+    public String getExpenseId() {
+        return expenseId;
+    }
 
-    public double getAmount() { return amount; }
-    public void setAmount(double amount) { this.amount = amount; }
+    public void setExpenseId(String expenseId) {
+        this.expenseId = expenseId;
+    }
 
-    public String getCategory() { return category; }
-    public void setCategory(String category) { this.category = category; }
+    public String getExpenseName() {
+        return expenseName;
+    }
 
-    public String getDate() { return date; }
-    public void setDate(String date) { this.date = date; }
+    public void setExpenseName(String expenseName) {
+        this.expenseName = expenseName;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }
